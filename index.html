@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Application</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#111827;
+    height:100vh;
+    display:flex;
+}
+
+.container{
+    width:100%;
+    display:flex;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:280px;
+    background:#1f2937;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    border-right:1px solid #374151;
+}
+
+.logo{
+    padding:20px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    border-bottom:1px solid #374151;
+}
+
+.search{
+    padding:15px;
+}
+
+.search input{
+    width:100%;
+    padding:10px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    background:#374151;
+    color:white;
+}
+
+.users{
+    overflow-y:auto;
+    flex:1;
+}
+
+.user{
+    display:flex;
+    align-items:center;
+    padding:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.user:hover{
+    background:#374151;
+}
+
+.avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#3b82f6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+    margin-right:12px;
+}
+
+.user-info h4{
+    font-size:15px;
+}
+
+.user-info p{
+    color:#9ca3af;
+    font-size:13px;
+}
+
+/* Chat */
+
+.chat-area{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    background:#0f172a;
+}
+
+.chat-header{
+    padding:18px;
+    border-bottom:1px solid #374151;
+    display:flex;
+    align-items:center;
+    color:white;
+}
+
+.chat-header .avatar{
+    margin-right:10px;
+}
+
+.messages{
+    flex:1;
+    padding:20px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.message{
+    max-width:65%;
+    padding:12px 16px;
+    border-radius:18px;
+    line-height:1.5;
+}
+
+.received{
+    background:#374151;
+    color:white;
+    align-self:flex-start;
+}
+
+.sent{
+    background:#2563eb;
+    color:white;
+    align-self:flex-end;
+}
+
+.chat-input{
+    padding:15px;
+    display:flex;
+    gap:10px;
+    border-top:1px solid #374151;
+}
+
+.chat-input input{
+    flex:1;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:30px;
+    background:#1f2937;
+    color:white;
+}
+
+.chat-input button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.chat-input button:hover{
+    background:#1d4ed8;
+}
+
+@media(max-width:768px){
+
+.sidebar{
+    display:none;
+}
+
+.chat-area{
+    width:100%;
+}
+
+.message{
+    max-width:85%;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            ChatApp
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Search">
+        </div>
+
+        <div class="users">
+
+            <div class="user">
+                <div class="avatar">A</div>
+                <div class="user-info">
+                    <h4>Alex</h4>
+                    <p>Typing...</p>
+                </div>
+            </div>
+
+            <div class="user">
+                <div class="avatar">S</div>
+                <div class="user-info">
+                    <h4>Sophia</h4>
+                    <p>See you later.</p>
+                </div>
+            </div>
+
+            <div class="user">
+                <div class="avatar">J</div>
+                <div class="user-info">
+                    <h4>John</h4>
+                    <p>Thank you!</p>
+                </div>
+            </div>
+
+            <div class="user">
+                <div class="avatar">M</div>
+                <div class="user-info">
+                    <h4>Maria</h4>
+                    <p>Good Morning</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Chat Area -->
+
+    <div class="chat-area">
+
+        <div class="chat-header">
+            <div class="avatar">A</div>
+            <h3>Alex</h3>
+        </div>
+
+        <div class="messages">
+
+            <div class="message received">
+                Hi! 👋 How are you?
+            </div>
+
+            <div class="message sent">
+                I'm doing great! How about you?
+            </div>
+
+            <div class="message received">
+                I'm good. Are you working on the chat application?
+            </div>
+
+            <div class="message sent">
+                Yes! This UI looks awesome. 🚀
+            </div>
+
+        </div>
+
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message...">
+            <button>Send</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
