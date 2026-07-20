@@ -79,3 +79,4 @@ This project is developed for educational purposes as part of the B.Tech Informa
 **Author:** Anirudh S  
 **Course:** B.Tech Information Technology  
 **College:** Ponjesly College of Engineering
+<img width="1306" height="818" alt="Screenshot 2026-07-20 153451" src="https://github.com/user-attachments/assets/a6fc33da-3b88-44ad-9d7c-5720a5896477" />
